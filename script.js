@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded",()=>{
 
     // This function help us handle the adding task process and the removal of each one. Since every task is added with his removal button
     function addTask() {
-        const taskText = taskInput.value.trim("");
+        const taskText = taskInput.value.trim();
         if(taskText == ""){
             alert("Enter a task name");
         }

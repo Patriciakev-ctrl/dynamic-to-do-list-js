@@ -8,7 +8,8 @@ document.addEventListener("DOMContentLoaded",()=>{
     // This function help us handle the adding task process and the removal of each one. Since every task is added with his removal button
     function addTask() {
         const taskText = taskInput.value.trim();
-        if(taskText == ""){
+        console.log("the value is: "+ taskText);
+        if(taskText == " "){
             alert("Enter a task name");
         }
         else{
@@ -19,7 +20,7 @@ document.addEventListener("DOMContentLoaded",()=>{
 
             button =document.createElement("button");
             button.textContent("Remove");
-            button.style.className("remove-btn");
+            button.style.classList.add = "remove-btn";
             button.addEventListener("click", ()=>{
                 taskList.removeChild(task);
             });
@@ -27,10 +28,10 @@ document.addEventListener("DOMContentLoaded",()=>{
             taskList.appendChild(task);
             taskInput.value = "";
         }
-        addButton.addEventListener("click", addTask());
+        addButton.addEventListener("click", addTask);
         taskInput.addEventListener("keypress",(event)=>{
             if (event.key == "Enter") addTask() ;
         });
     }
-    document.addEventListener("DOMContentLoaded", ()=>{addTask()});
+   
 });
